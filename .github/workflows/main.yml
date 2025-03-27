@@ -1,0 +1,15 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -uses: actions/checkout@v3
+      -name: instal packages
+      run make install
+      -name: lint
+      run: make lint
+      -name: test
+      run: make test
+      -name: build
+      run: make build
+      -name format:
+      run: make format
